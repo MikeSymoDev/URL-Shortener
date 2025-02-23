@@ -14,16 +14,17 @@ npm run devStart
 
 docker run -d --name mongodb-container -p 27017:27017 mongo
 
+### Start and Stop MongoDB
+
+docker start mongodb-container
+
+docker stop mongodb-container
+
 ### Verify, that MongoDB is running
 
 docker exec -it mongodb-container mongosh
 
 show dbs
-
-### Start and Stop MongoDB
-
-docker start mongodb-container
-docker stop mongodb-container
 
 ### Check running containers
 
