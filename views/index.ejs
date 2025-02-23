@@ -29,11 +29,16 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><a href="https://www.srf.ch">https://www.srf.ch</a></td>
-            <td><a href="/123456">123456</a></td>
-            <td>10</td>
-        </tr>
+        <% shortUrls.forEach(shortUrl => { %>
+
+            <tr>
+                <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                <td><%= shortUrl.clicks %></td>
+            </tr>
+
+        <%  }) %>
+
         </tbody>
     </table>
 
